@@ -1,0 +1,43 @@
+<h2>Exams</h2>
+<fieldset>
+	<h3>Create a new exam</h3>
+
+	<p *ngFor="let error of errors" class="error">{{error}}</p>
+
+	<form (submit)="onSubmit()">
+		<p>Name: <input type="text" name="name"
+			[(ngModel)]="newExam.name" required #name="ngModel">
+		</p>
+		<p>Stack: <input type="text" name="stack"
+			[(ngModel)]="newExam.stack" required #stack="ngModel">
+		</p>
+		<p>Difficulty Level: <input type="number" name="difficultyLevel"
+			[(ngModel)]="newExam.difficultyLevel" required #difficultyLevel="ngModel">
+		</p>
+		<p>Black Belts: <input type="number" name="blackBelts"
+			[(ngModel)]="newExam.blackBelts" required #blackBelts="ngModel">
+		</p>
+		<input type="submit" name="">
+	</form>
+</fieldset>
+
+
+
+
+<fieldset>
+	<h3>List of exams</h3>
+	<table>
+		<tr id="header-row">
+			<td>Name</td>
+			<td>Difficulty Level</td>
+			<td>Stack</td>
+			<td># Black Belts</td>
+		</tr>
+		<tr *ngFor="let exam of exams">
+			<td>{{exam.name}}</td>
+			<td>{{exam.difficultyLevel}}</td>
+			<td>{{exam.stack}}</td>
+			<td>{{exam.blackBelts}}</td>
+		</tr>
+	</table>
+</fieldset>

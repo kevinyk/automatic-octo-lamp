@@ -1,0 +1,10 @@
+td{
+	text-align:center;
+	padding:1vw;
+}
+#header-row{
+	background-color: grey;
+}
+.error{
+	color:red;
+}
